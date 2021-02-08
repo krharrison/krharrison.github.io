@@ -63,7 +63,7 @@ Industry Experience
   * Developed a tool to optimize soil placement based on various landscape features
   * Developed a prototype radar prediction system
 
-**Research Associate: Niagara College, Canada (Jul. 2013 - Mar. 2013)**
+**Research Associate: Niagara College, Canada (Jul. 2012 - Mar. 2013)**
   * Research and Innovation Department
   * Designed and developed a subscription management and delivery coordination system in collaborationwith The Organic General Store
 

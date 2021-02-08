@@ -1,6 +1,6 @@
 ---
 title: "Intelligent Algorithms for Portfolio Selection in Future Force Design"
-excerpt: "Development of intelligent portfolio selection strategies for future force design.<br/><img src='/images/ffd-challenges.png'>"
+excerpt: "Development of intelligent portfolio selection strategies for future force design.<br/><br/><img src='/images/ffd-challenges.png'>"
 collection: projects
 ---
 

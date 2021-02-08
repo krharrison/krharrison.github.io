@@ -1,6 +1,6 @@
 ---
 title: "Parameter Configuration Landscapes for Computational Intelligence Algorithms"
-excerpt: "Investigating the landscape induced by control parameter values.<br/><img src='/images/geomorphons.png'>"
+excerpt: "Investigating the landscape induced by control parameter values.<br/><br/><img src='/images/geomorphons.png'>"
 collection: projects
 ---
 

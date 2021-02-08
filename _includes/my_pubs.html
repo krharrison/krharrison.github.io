@@ -1,0 +1,665 @@
+<html>
+<head>
+<title>My Publications</title>
+<script type="text/javascript">
+	function toggleInfo(articleid,info) {
+	
+		var entry = document.getElementById(articleid);
+		var abs = document.getElementById('abs_'+articleid);
+		var rev = document.getElementById('rev_'+articleid);
+		var bib = document.getElementById('bib_'+articleid);
+		
+		if (abs && info == 'abstract') {
+			abs.className.indexOf('noshow') == -1?abs.className = 'abstract noshow':abs.className = 'abstract show';
+		} else if (rev && info == 'comment') {
+			rev.className.indexOf('noshow') == -1?rev.className = 'comment noshow':rev.className = 'comment show';
+		} else if (bib && info == 'bibtex') {
+			bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex show';
+		} else { 
+			return;
+		}
+	
+		// check if one or the other is available
+		var revshow; var absshow; var bibshow;
+		(abs && abs.className.indexOf('noshow') == -1)? absshow = true: absshow = false;
+		(rev && rev.className.indexOf('noshow') == -1)? revshow = true: revshow = false;	
+		(bib && bib.className.indexOf('noshow') == -1)? bibshow = true: bibshow = false;
+		
+		// highlight original entry
+		if(entry) {
+			if (revshow || absshow || bibshow) {
+			entry.className = 'entry highlight show';
+			} else {
+			entry.className = 'entry show';
+			}
+		}
+		
+		// When there's a combination of abstract/comment/bibtex showing, need to add class for correct styling
+		if(absshow) {
+			(revshow||bibshow)?abs.className = 'abstract nextshow':abs.className = 'abstract';
+		} 
+		if (revshow) {
+			bibshow?rev.className = 'comment nextshow': rev.className = 'comment';
+		}	
+		
+	}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+div#settings ul {margin: 0; padding: 0; }
+div#settings li {margin: 0; padding: 0 1em 0 0; display: inline; list-style: none; }
+div#settings li + li { border-left: 2px #efefef solid; padding-left: 0.5em;}
+div#settings input { margin-bottom: 0px;}
+
+div#settings.hidden {display:none;}
+
+table { border: 1px gray none; width: 100%; empty-cells: show; border-spacing: 0em 0.1em; margin: 1em 0em; }
+th, td { border: none; padding: 0.5em; vertical-align: top; text-align: justify; }
+
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+tr.highlight td { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
+tr.abstract td, tr.review td, tr.bibtex td { background-color: #EFEFEF; text-align: justify; border-bottom: 2px #2E2E2E solid; }
+tr.nextshow td { border-bottom-style: none; }
+
+tr.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
+p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+
+@media print {
+	p.infolinks, #qs_settings, #quicksearch, t.bibtex { display: none !important; }
+	tr { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<table id="qs_table" border="1">
+<tbody>
+<tr id="Harrison2020a" class="entry">
+	<td>K. R. Harrison, S. Elsayed, I. Garanovich, T. Weir, M. Galister, S. Boswell, R. Taylor and R. Sarker (2020), <i>"Portfolio Optimization for Defence Applications"</i>, IEEE Access. Vol. 8, pp. 60152-60178.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2020a','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/ACCESS.2020.2983141" target="_blank">DOI</a>] [<a href="https://ieeexplore.ieee.org/document/9046777/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2020a" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Harrison2020a,
+  author = {Harrison, Kyle Robert and Elsayed, Saber and Garanovich, Ivan and Weir, Terence and Galister, Michael and Boswell, Sharon and Taylor, Richard and Sarker, Ruhul},
+  title = {Portfolio Optimization for Defence Applications},
+  journal = {IEEE Access},
+  year = {2020},
+  volume = {8},
+  pages = {60152--60178},
+  url = {https://ieeexplore.ieee.org/document/9046777/},
+  doi = {10.1109/ACCESS.2020.2983141}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2020d" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2020), <i>"Visualizing and Characterizing the Parameter Configuration Landscape of Differential Evolution using Physical Landform Classification"</i>, In 2020 IEEE Symposium Series on Computational Intelligence (SSCI)., pp. 2437-2444. IEEE.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2020d','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/SSCI47803.2020.9308536" target="_blank">DOI</a>] [<a href="https://ieeexplore.ieee.org/document/9308536/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2020d" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2020d,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {Visualizing and Characterizing the Parameter Configuration Landscape of Differential Evolution using Physical Landform Classification},
+  booktitle = {2020 IEEE Symposium Series on Computational Intelligence (SSCI)},
+  publisher = {IEEE},
+  year = {2020},
+  pages = {2437--2444},
+  url = {https://ieeexplore.ieee.org/document/9308536/},
+  doi = {10.1109/SSCI47803.2020.9308536}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2020c" class="entry">
+	<td>K. R. Harrison, S. Elsayed, T. Weir, I. L. Garanovich, R. Taylor and R. Sarker (2020), <i>"An Exploration of Meta-Heuristic Approaches for the Project Portfolio Selection and Scheduling Problem in a Defence Context"</i>, In 2020 IEEE Symposium Series on Computational Intelligence (SSCI)., pp. 1395-1402. IEEE.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2020c','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/SSCI47803.2020.9308608" target="_blank">DOI</a>] [<a href="https://ieeexplore.ieee.org/document/9308608/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2020c" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2020c,
+  author = {Harrison, Kyle Robert and Elsayed, Saber and Weir, Terence and Garanovich, Ivan L. and Taylor, Richard and Sarker, Ruhul},
+  title = {An Exploration of Meta-Heuristic Approaches for the Project Portfolio Selection and Scheduling Problem in a Defence Context},
+  booktitle = {2020 IEEE Symposium Series on Computational Intelligence (SSCI)},
+  publisher = {IEEE},
+  year = {2020},
+  pages = {1395--1402},
+  url = {https://ieeexplore.ieee.org/document/9308608/},
+  doi = {10.1109/SSCI47803.2020.9308608}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2020b" class="entry">
+	<td>K. R. Harrison, S. Elsayed, T. Weir, I. L. Garanovich, M. Galister, S. Boswell, R. Taylor and R. Sarker (2020), <i>"Multi-Period Project Selection and Scheduling for Defence Capability-Based Planning"</i>, In 2020 IEEE International Conference on Systems, Man, and Cybernetics (SMC)., pp. 4044-4050. IEEE.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2020b','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/SMC42975.2020.9283334" target="_blank">DOI</a>] [<a href="https://ieeexplore.ieee.org/document/9283334/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2020b" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2020b,
+  author = {Harrison, Kyle Robert and Elsayed, Saber and Weir, Terence and Garanovich, Ivan L. and Galister, Michael and Boswell, Sharon and Taylor, Richard and Sarker, Ruhul},
+  title = {Multi-Period Project Selection and Scheduling for Defence Capability-Based Planning},
+  booktitle = {2020 IEEE International Conference on Systems, Man, and Cybernetics (SMC)},
+  publisher = {IEEE},
+  year = {2020},
+  pages = {4044--4050},
+  url = {https://ieeexplore.ieee.org/document/9283334/},
+  doi = {10.1109/SMC42975.2020.9283334}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2019b" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2019), <i>"An Analysis of Control Parameter Importance in the Particle Swarm Optimization Algorithm"</i>, In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Vol. 11655 LNCS, pp. 93-105.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2019b','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2019b','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/978-3-030-26369-0_9" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/978-3-030-26369-0{\_}9" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2019b" class="abstract noshow">
+	<td><b>Abstract</b>: textcopyright Springer Nature Switzerland AG 2019. Particle swarm optimization (PSO) is a stochastic search algorithm based on the social dynamics of a flock of birds. The performance of the PSO algorithm is known to be sensitive to the values assigned to its control parameters, and appropriate tuning of these control parameters can greatly improve performance. This paper employs function analysis of variance (fANOVA) to quantify the importance of each of the three conventional PSO control parameters, namely the inertia weight (&omega;), the cognitive acceleration coefficient (c1), and the social acceleration coefficient (c2), according to their respective variances associated with the fitness. Results indicate that the inertia value, &omega;, has the greatest sensitivity to its assigned value and thus is the most important parameter to tune when optimizing PSO performance for low dimensional problems.</td>
+</tr>
+<tr id="bib_Harrison2019b" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@incollection{Harrison2019b,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {An Analysis of Control Parameter Importance in the Particle Swarm Optimization Algorithm},
+  booktitle = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+  year = {2019},
+  volume = {11655 LNCS},
+  pages = {93--105},
+  url = {http://link.springer.com/10.1007/978-3-030-26369-0_9},
+  doi = {10.1007/978-3-030-26369-0_9}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2019" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2019), <i>"A parameter-free particle swarm optimization algorithm using performance classifiers"</i>, Information Sciences. Vol. 503, pp. 381-400.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2019','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2019','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ins.2019.07.016" target="_blank">DOI</a>] [<a href="https://linkinghub.elsevier.com/retrieve/pii/S0020025519306188" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2019" class="abstract noshow">
+	<td><b>Abstract</b>: textcopyright 2019 This paper presents an investigation into the short-term versus long-term performance of various particle swarm optimization (PSO) control parameter configurations. While evidence suggests that the best PSO parameter values to employ are time-dependent, this paper provides an in-depth examination of a small set of parameter values to provide a more concrete quantification of the performance degradation observed with specific control parameter configurations over time. Given that the short-term performance is not necessarily indicative of long-term performance, this paper proposes that machine learning techniques be used to build predictive models based on two easily-observable landscape characteristics. Finally, using the predictive models as a basis, this paper also proposes a parameter-free PSO algorithm, which performs on par with other top-performing PSO variants, namely the three best performing static PSO configurations, particle swarm optimization with time-varying acceleration coefficients (PSO-TVAC), and particle swarm optimization with improved random constants (PSO-iRC).</td>
+</tr>
+<tr id="bib_Harrison2019" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Harrison2019,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {A parameter-free particle swarm optimization algorithm using performance classifiers},
+  journal = {Information Sciences},
+  year = {2019},
+  volume = {503},
+  pages = {381--400},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S0020025519306188},
+  doi = {10.1016/j.ins.2019.07.016}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2019a" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2019), <i>"The Parameter Configuration Landscape: A Case Study on Particle Swarm Optimization"</i>, In 2019 IEEE Congress on Evolutionary Computation (CEC)., pp. 808-814. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2019a','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2019a','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2019.8790242" target="_blank">DOI</a>] [<a href="https://ieeexplore.ieee.org/document/8790242/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2019a" class="abstract noshow">
+	<td><b>Abstract</b>: textcopyright 2019 IEEE. It is well known that tuning a meta-heuristic optimizer is a challenging, yet rewarding process. Despite the benefits of a properly tuned optimizer, there is very little that is understood about the actual tuning process - many automated parameter tuning methods use an assumption that parameter configurations near a promising configuration will also be promising. However, this assumption has not been verified, in general. While the field of fitness landscape analysis can provide insight into the difficulty of an optimization problem, these techniques have not yet been applied to the parameter tuning problem. This paper proposes a methodology to apply standard techniques from fitness landscape analysis to the parameter configuration landscape of an arbitrary optimizer. This allows the characterization of the parameter tuning problem for an arbitrary optimizer on an arbitrary optimization problem. The proposed methodology is then investigated for the particle swarm optimization (PSO) algorithm on 20 benchmark problems in both 10 and 30 dimensions. The results indicate that the parameter configuration landscape of the PSO algorithm is globally unimodal, yet not necessarily an easy landscape to search. Furthermore, it is found that the characteristics of the PSO parameter configuration landscape do not correlate with the characteristics of the target benchmark problems.</td>
+</tr>
+<tr id="bib_Harrison2019a" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2019a,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {The Parameter Configuration Landscape: A Case Study on Particle Swarm Optimization},
+  booktitle = {2019 IEEE Congress on Evolutionary Computation (CEC)},
+  publisher = {IEEE},
+  year = {2019},
+  pages = {808--814},
+  url = {https://ieeexplore.ieee.org/document/8790242/},
+  doi = {10.1109/CEC.2019.8790242}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2018a" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2018), <i>"Gaussian-Valued Particle Swarm Optimization"</i>, pp. 368-377.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2018a','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/978-3-030-00533-7_31" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/978-3-030-00533-7{\_}31" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2018a" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@incollection{Harrison2018a,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {Gaussian-Valued Particle Swarm Optimization},
+  year = {2018},
+  pages = {368--377},
+  url = {http://link.springer.com/10.1007/978-3-030-00533-7_31},
+  doi = {10.1007/978-3-030-00533-7_31}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2017Self" class="entry">
+	<td>K. R. Harrison, A. P. Engelbrecht and B. M. Ombuki-Berman (2018), <i>"Self-adaptive particle swarm optimization: a review and analysis of convergence"</i>, Swarm Intelligence. Vol. 12(3), pp. 187-226.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2017Self','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/s11721-017-0150-9" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/s11721-017-0150-9" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2017Self" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Harrison2017Self,
+  author = {Harrison, Kyle Robert and Engelbrecht, Andries P and Ombuki-Berman, Beatrice M},
+  title = {Self-adaptive particle swarm optimization: a review and analysis of convergence},
+  journal = {Swarm Intelligence},
+  year = {2018},
+  volume = {12},
+  number = {3},
+  pages = {187--226},
+  url = {http://link.springer.com/10.1007/s11721-017-0150-9},
+  doi = {10.1007/s11721-017-0150-9}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2018" class="entry">
+	<td>K. R. Harrison, A. P. Engelbrecht and B. M. Ombuki-Berman (2018), <i>"Optimal parameter regions and the time-dependence of control parameter values for the particle swarm optimization algorithm"</i>, Swarm and Evolutionary Computation. Vol. 41(January), pp. 20-35. Elsevier B.V..
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2018','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2018','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.swevo.2018.01.006" target="_blank">DOI</a>] [<a href="https://doi.org/10.1016/j.swevo.2018.01.006 https://linkinghub.elsevier.com/retrieve/pii/S2210650217306570" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2018" class="abstract noshow">
+	<td><b>Abstract</b>: The particle swarm optimization (PSO) algorithm is a stochastic search technique based on the social dynamics of a flock of birds. It has been established that the performance of the PSO algorithm is sensitive to the values assigned to its control parameters. Many studies have examined the long-term behaviours of various PSO parameter configurations, but have failed to provide a quantitative analysis across a variety of benchmark problems. Furthermore, two important questions have remained unanswered. Specifically, the effects of the balance between the values of the acceleration coefficients on the optimal parameter regions, and whether the optimal parameters to employ are time-dependent, warrant further investigation. This study addresses both questions by examining the performance of a global-best PSO using 3036 different parameter configurations on a set of 22 benchmark problems. Results indicate that the balance between the acceleration coefficients does impact the regions of parameter space that lead to optimal performance. Additionally, this study provides concrete evidence that, for the examined problem dimensions, larger acceleration coefficients are preferred as the search progresses, thereby indicating that the optimal parameters are, in fact, time-dependent. Finally, this study provides a general recommendation for the selection of PSO control parameter values.</td>
+</tr>
+<tr id="bib_Harrison2018" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Harrison2018,
+  author = {Harrison, Kyle Robert and Engelbrecht, Andries P. and Ombuki-Berman, Beatrice M.},
+  title = {Optimal parameter regions and the time-dependence of control parameter values for the particle swarm optimization algorithm},
+  journal = {Swarm and Evolutionary Computation},
+  publisher = {Elsevier B.V.},
+  year = {2018},
+  volume = {41},
+  number = {January},
+  pages = {20--35},
+  url = {https://doi.org/10.1016/j.swevo.2018.01.006 https://linkinghub.elsevier.com/retrieve/pii/S2210650217306570},
+  doi = {10.1016/j.swevo.2018.01.006}
+}
+</pre></td>
+</tr>
+<tr id="Ventresca2018" class="entry">
+	<td>M. Ventresca, K. R. Harrison and B. M. Ombuki-Berman (2018), <i>"The bi-objective critical node detection problem"</i>, European Journal of Operational Research. Vol. 265(3), pp. 895-908.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Ventresca2018','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Ventresca2018','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ejor.2017.08.053" target="_blank">DOI</a>] [<a href="https://linkinghub.elsevier.com/retrieve/pii/S0377221717307841" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Ventresca2018" class="abstract noshow">
+	<td><b>Abstract</b>: textcopyright 2017 Elsevier B.V. Identifying critical nodes in complex networks has become an important task across a variety of application domains. The Critical Node Detection Problem (CNDP) is an optimization problem that aims to minimize pairwise connectivity in a graph by removing a subset of K nodes. Despite the CNDP being recognized as a bi-objective problem, until now only single-objective problem formulations have been proposed. In this paper, we propose a bi-objective version of the problem that aims to maximize the number of connected components in a graph while simultaneously minimizing the variance of their cardinalities by removing a subset of K nodes. We prove that our bi-objective formulation is distinct from the CNDP, despite their common motivation. Finally, we give a brief comparison of six common multi-objective evolutionary algorithms using sixteen common benchmark problem instances, including for the node-weighted CNDP. We find that of the examined algorithms, NSGAII generally produces the most desirable approximation fronts.</td>
+</tr>
+<tr id="bib_Ventresca2018" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Ventresca2018,
+  author = {Ventresca, Mario and Harrison, Kyle Robert and Ombuki-Berman, Beatrice M.},
+  title = {The bi-objective critical node detection problem},
+  journal = {European Journal of Operational Research},
+  year = {2018},
+  volume = {265},
+  number = {3},
+  pages = {895--908},
+  url = {https://linkinghub.elsevier.com/retrieve/pii/S0377221717307841},
+  doi = {10.1016/j.ejor.2017.08.053}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2017Adaptive" class="entry">
+	<td>K. R. Harrison, A. P. Engelbrecht and B. M. Ombuki-Berman (2017), <i>"An adaptive particle swarm optimization algorithm based on optimal parameter regions"</i>, In 2017 IEEE Symposium Series on Computational Intelligence (SSCI)., pp. 1-8. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2017Adaptive','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2017Adaptive','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/SSCI.2017.8285342" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/8285342/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2017Adaptive" class="abstract noshow">
+	<td><b>Abstract</b>: The performance of the particle swarm optimization (PSO) algorithm is known to be sensitive to the values of its control parameters. Parameter tuning is thus an important aspect in optimizing PSO performance. While many studies have examined a variety of PSO parameters and have provided general-purpose parameter suggestions, a recent study has shown that the best parameters to employ are, in fact, time-dependent. Furthermore, a priori parameter tuning is a time-consuming procedure and assumes that the best parameters to employ do not change over time. This study proposes a new PSO variant which randomly samples its control parameter values from a region known to contain promising parameter configurations, thereby eliminating the need to specify (and tune) values for the traditional PSO control parameters. The new PSO variant is compared to PSO employing 14 different parametrizations suggested in the literature. Results indicate that the performance of the proposed variant is on par with the best parameter configurations suggested in the literature.</td>
+</tr>
+<tr id="bib_Harrison2017Adaptive" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2017Adaptive,
+  author = {Harrison, Kyle Robert and Engelbrecht, Andries P. and Ombuki-Berman, Beatrice M.},
+  title = {An adaptive particle swarm optimization algorithm based on optimal parameter regions},
+  booktitle = {2017 IEEE Symposium Series on Computational Intelligence (SSCI)},
+  publisher = {IEEE},
+  year = {2017},
+  pages = {1--8},
+  url = {http://ieeexplore.ieee.org/document/8285342/},
+  doi = {10.1109/SSCI.2017.8285342}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2017Optimal" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2017), <i>"Optimal parameter regions for particle swarm optimization algorithms"</i>, In 2017 IEEE Congress on Evolutionary Computation (CEC)., pp. 349-356. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2017Optimal','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2017Optimal','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2017.7969333" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/7969333/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2017Optimal" class="abstract noshow">
+	<td><b>Abstract</b>: Particle swarm optimization (PSO) is a stochastic search algorithm based on the social dynamics of a flock of birds. The performance of the PSO algorithm is known to be sensitive to the values assigned to its control parameters. While many studies have provided reasonable ranges in which to initialize the parameters based on their long-term behaviours, such previous studies fail to quantify the empirical performance of parameter configurations across a wide variety of benchmark problems. This paper specifically address this issue by examining the performance of a set of 1012 parameter configurations of the PSO algorithm over a set of 22 benchmark problems using both the global-best and local-best topologies. Results indicate that, in general, parameter configurations which are within close proximity to the boundaries of the best-known theoretically- defined convergent region lead to better performance than con- figurations which are further away. Moreover, results indicate that neighbourhood topology plays a far more significant role than modality and separability when determining the regions in parameter space which perform well.</td>
+</tr>
+<tr id="bib_Harrison2017Optimal" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2017Optimal,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {Optimal parameter regions for particle swarm optimization algorithms},
+  booktitle = {2017 IEEE Congress on Evolutionary Computation (CEC)},
+  publisher = {IEEE},
+  year = {2017},
+  pages = {349--356},
+  url = {http://ieeexplore.ieee.org/document/7969333/},
+  doi = {10.1109/CEC.2017.7969333}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2016Inertia" class="entry">
+	<td>K. R. Harrison, A. P. Engelbrecht and B. M. Ombuki-Berman (2016), <i>"Inertia weight control strategies for particle swarm optimization"</i>, Swarm Intelligence. Vol. 10(4), pp. 267-305. Springer US.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2016Inertia','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2016Inertia','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/s11721-016-0128-z" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/s11721-016-0128-z" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2016Inertia" class="abstract noshow">
+	<td><b>Abstract</b>: Particle swarm optimization (PSO) is a population-based, stochastic optimization technique inspired by the social dynamics of birds. The PSO algorithm is rather sensitive to the control parameters, and thus, there has been a significant amount of research effort devoted to the dynamic adaptation of these parameters. The focus of the adaptive approaches has largely revolved around adapting the inertia weight as it exhibits the clearest relationship with the exploration/exploitation balance of the PSO algorithm. However, despite the significant amount of research efforts, many inertia weight control strategies have not been thoroughly examined analytically nor empirically. Thus, there are a plethora of choices when selecting an inertia weight control strategy, but no study has been comprehensive enough to definitively guide the selection. This paper addresses these issues by first providing an overview of 18 inertia weight control strategies. Secondly, conditions required for the strategies to exhibit convergent behaviour are derived. Finally, the inertia weight control strategies are empirically examined on a suite of 60 benchmark problems. Results of the empirical investigation show that none of the examined strategies, with the exception of a randomly selected inertia weight, even perform on par with a constant inertia weight.</td>
+</tr>
+<tr id="bib_Harrison2016Inertia" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Harrison2016Inertia,
+  author = {Harrison, Kyle Robert and Engelbrecht, Andries P. and Ombuki-Berman, Beatrice M.},
+  title = {Inertia weight control strategies for particle swarm optimization},
+  journal = {Swarm Intelligence},
+  publisher = {Springer US},
+  year = {2016},
+  volume = {10},
+  number = {4},
+  pages = {267--305},
+  url = {http://link.springer.com/10.1007/s11721-016-0128-z},
+  doi = {10.1007/s11721-016-0128-z}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2015Meta" class="entry">
+	<td>K. R. Harrison, M. Ventresca and B. M. Ombuki-Berman (2016), <i>"A meta-analysis of centrality measures for comparing and generating complex network models"</i>, Journal of Computational Science. Vol. 17(1), pp. 205-215. Elsevier B.V..
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2015Meta','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2015Meta','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jocs.2015.09.011" target="_blank">DOI</a>] [<a href="http://linkinghub.elsevier.com/retrieve/pii/S1877750315300259 https://linkinghub.elsevier.com/retrieve/pii/S1877750315300259" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2015Meta" class="abstract noshow">
+	<td><b>Abstract</b>: Complex networks are often characterized by their statistical and topological network properties such as degree distribution, average path length, and clustering coefficient. However, many more characteristics can also be considered such as graph similarity, centrality, or flow properties. These properties have been utilized as feedback for algorithms whose goal is to ascertain plausible network models (also called generators) for a given network. However, a good set of network measures to employ that can be said to sufficiently capture network structure is not yet known. In this paper we provide an investigation into this question through a meta-analysis that quantifies the ability of a subset of measures to appropriately compare model (dis)similarity. The results are utilized as fitness measures for improving a recently proposed genetic programming (GP) framework that is capable of ascertaining a plausible network model from a single network observation. It is shown that the candidate model evaluation criteria of the GP system to automatically infer existing (man-made) network models, in addition to real-world networks, is improved.</td>
+</tr>
+<tr id="bib_Harrison2015Meta" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{Harrison2015Meta,
+  author = {Harrison, Kyle Robert and Ventresca, Mario and Ombuki-Berman, Beatrice M.},
+  title = {A meta-analysis of centrality measures for comparing and generating complex network models},
+  journal = {Journal of Computational Science},
+  publisher = {Elsevier B.V.},
+  year = {2016},
+  volume = {17},
+  number = {1},
+  pages = {205--215},
+  url = {http://linkinghub.elsevier.com/retrieve/pii/S1877750315300259 https://linkinghub.elsevier.com/retrieve/pii/S1877750315300259},
+  doi = {10.1016/j.jocs.2015.09.011}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2016Sad" class="entry">
+	<td>K. R. Harrison, A. P. Engelbrecht and B. M. Ombuki-Berman (2016), <i>"The sad state of self-adaptive particle swarm optimizers"</i>, In 2016 IEEE Congress on Evolutionary Computation (CEC)., pp. 431-439. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2016Sad','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2016Sad','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2016.7743826" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/7743826/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2016Sad" class="abstract noshow">
+	<td><b>Abstract</b>: The performance of the Particle Swarm Optimization (PSO) algorithm can be greatly improved if the parameters are appropriately tuned. However, tuning the control parameters for PSO algorithms has traditionally been a time-consuming, empirical process. Furthermore, ideal parameters may be time-dependent. To address the issue of parameter tuning, self-adaptive PSO (SAPSO) algorithms adapt the PSO control parameters over time. While many such SAPSO techniques have been proposed, their behaviour is not well understood as no in-depth critical analysis of their adaptation mechanisms has been performed. This study examines the convergence behaviour of eight SAPSO algorithms both analytically and empirically. Evidence clearly indicates that the field of self-adaptive PSO algorithms is in a sad state, given that many techniques either demonstrate divergent behaviour coupled with excessive invalid particles, and thus infeasible solutions, or have prohibitively low particle step sizes caused by rapid convergence.</td>
+</tr>
+<tr id="bib_Harrison2016Sad" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2016Sad,
+  author = {Harrison, Kyle Robert and Engelbrecht, Andries P. and Ombuki-Berman, Beatrice M.},
+  title = {The sad state of self-adaptive particle swarm optimizers},
+  booktitle = {2016 IEEE Congress on Evolutionary Computation (CEC)},
+  publisher = {IEEE},
+  year = {2016},
+  pages = {431--439},
+  url = {http://ieeexplore.ieee.org/document/7743826/},
+  doi = {10.1109/CEC.2016.7743826}
+}
+</pre></td>
+</tr>
+<tr id="Medland2016Automatic" class="entry">
+	<td>M. R. Medland, K. R. Harrison and B. M. Ombuki-Berman (2016), <i>"Automatic inference of graph models for directed complex networks using genetic programming"</i>, In 2016 IEEE Congress on Evolutionary Computation (CEC)., pp. 2337-2344. IEEE.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Medland2016Automatic','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2016.7744077" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/7744077/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Medland2016Automatic" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Medland2016Automatic,
+  author = {Medland, Michael Richard and Harrison, Kyle Robert and Ombuki-Berman, Beatrice M.},
+  title = {Automatic inference of graph models for directed complex networks using genetic programming},
+  booktitle = {2016 IEEE Congress on Evolutionary Computation (CEC)},
+  publisher = {IEEE},
+  year = {2016},
+  pages = {2337--2344},
+  url = {http://ieeexplore.ieee.org/document/7744077/},
+  doi = {10.1109/CEC.2016.7744077}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2016Radius" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2016), <i>"A radius-free quantum particle swarm optimization technique for dynamic optimization problems"</i>, In 2016 IEEE Congress on Evolutionary Computation (CEC)., pp. 578-585. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2016Radius','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2016Radius','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2016.7743845" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/7743845/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2016Radius" class="abstract noshow">
+	<td><b>Abstract</b>: The quantum particle swarm optimization (QPSO) algorithm is a variant of the traditional particle swarm opti- mization (PSO) algorithm aimed at solving dynamic optimization problems. Some particles in the QPSO algorithm are selected as “quantum” particles and the positions of these particles are sampled, using some probability distribution, within a radius (i.e., a hypersphere) around the global best position while the remain- der of particles follow standard PSO behaviour. The exploration and exploitation of the QPSO algorithm is heavily influenced by the probability distribution used as well as the size of the quantum radius. However, the best probability distribution and radius size are both problem and environment dependent. This work proposes using a parent centric crossover (PCX) operator to generate the positions of quantum particles, thereby removing the need for radius and probability distribution parameters completely. Two variants are proposed and results indicate that both variants are superior to QPSO, especially in environments exhibiting high temporal severity.</td>
+</tr>
+<tr id="bib_Harrison2016Radius" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2016Radius,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {A radius-free quantum particle swarm optimization technique for dynamic optimization problems},
+  booktitle = {2016 IEEE Congress on Evolutionary Computation (CEC)},
+  publisher = {IEEE},
+  year = {2016},
+  pages = {578--585},
+  url = {http://ieeexplore.ieee.org/document/7743845/},
+  doi = {10.1109/CEC.2016.7743845}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2015Investigating" class="entry">
+	<td>K. R. Harrison, M. Ventresca and B. M. Ombuki-Berman (2015), <i>"Investigating Fitness Measures for the Automatic Construction of Graph Models"</i>, In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Vol. 9028, pp. 189-200. Springer.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2015Investigating','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2015Investigating','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/978-3-319-16549-3_16" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/978-3-319-16549-3{\_}16" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2015Investigating" class="abstract noshow">
+	<td><b>Abstract</b>: Graph models are often constructed as a tool to better understand the growth dynamics of complex networks. Traditionally, graph models have been constructed through a very time consuming and difficult manual process. Recently, there have been various methods proposed to alleviate the manual efforts required when constructing these models, using statistical and evolutionary strategies. A major difficulty associated with automated approaches lies in the evaluation of candidate models. To address this difficulty, this paper examines a number of well-known network properties using a proposed meta-analysis procedure. The meta-analysis demonstrated how these network measures interacted when used together as classifiers to determine network, and thus model, (dis)similarity. The analytical results formed the basis of a fitness evaluation scheme used in a genetic programming (GP) system to automatically construct graph models for complex networks. The GPbased automatic inference system was used to reproduce two well-known graph models, the results of which indicated that the evolved models exemplified striking similarity when compared to their respective targets on a number of structural network properties.</td>
+</tr>
+<tr id="bib_Harrison2015Investigating" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@incollection{Harrison2015Investigating,
+  author = {Harrison, Kyle Robert and Ventresca, Mario and Ombuki-Berman, Beatrice M.},
+  title = {Investigating Fitness Measures for the Automatic Construction of Graph Models},
+  booktitle = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+  publisher = {Springer},
+  year = {2015},
+  volume = {9028},
+  pages = {189--200},
+  url = {http://link.springer.com/10.1007/978-3-319-16549-3_16},
+  doi = {10.1007/978-3-319-16549-3_16}
+}
+</pre></td>
+</tr>
+<tr id="Ventresca2015Experimental" class="entry">
+	<td>M. Ventresca, K. R. Harrison and B. M. Ombuki-Berman (2015), <i>"An Experimental Evaluation of Multi-objective Evolutionary Algorithms for Detecting Critical Nodes in Complex Networks"</i>, In Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Vol. 9028, pp. 164-176. Springer.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Ventresca2015Experimental','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Ventresca2015Experimental','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/978-3-319-16549-3_14" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/978-3-319-16549-3{\_}14" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Ventresca2015Experimental" class="abstract noshow">
+	<td><b>Abstract</b>: Identifying critical nodes in complex networks has become an important task across a variety of application domains. In this paper we propose a multi-objective version of the critical node detection problem, which aims to minimize pairwise connectivity in a graph by removing a subset of K nodes. Interestingly, while it has been recognized that this problem is inherently multi-objective since it was formulated, until now only single-objective algorithms have been proposed. After explicitly stating the new multi-objective problem variant, we then give a brief comparison of six common multi-objective evolutionary algorithms using sixteen common benchmark problem instances. A comparison of the results attained by viewing the algorithm as a single versus multiobjective problem is also conducted. We find that of the examined algorithms, NSGAII generally produces the most desirable approximation fronts. We also demonstrate that while related, the best multi-objective solutions do not translate into the best single-objective solutions.</td>
+</tr>
+<tr id="bib_Ventresca2015Experimental" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@incollection{Ventresca2015Experimental,
+  author = {Ventresca, Mario and Harrison, Kyle Robert and Ombuki-Berman, Beatrice M.},
+  title = {An Experimental Evaluation of Multi-objective Evolutionary Algorithms for Detecting Critical Nodes in Complex Networks},
+  booktitle = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+  publisher = {Springer},
+  year = {2015},
+  volume = {9028},
+  pages = {164--176},
+  url = {http://link.springer.com/10.1007/978-3-319-16549-3_14},
+  doi = {10.1007/978-3-319-16549-3_14}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2015b" class="entry">
+	<td>K. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2015), <i>"The Effect of Probability Distributions on the Performance of Quantum Particle Swarm Optimization for Solving Dynamic Optimization Problems"</i>, In 2015 IEEE Symposium Series on Computational Intelligence., pp. 242-250. IEEE.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('Harrison2015b','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/SSCI.2015.44" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/7376617/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_Harrison2015b" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2015b,
+  author = {Harrison, Kyle and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P},
+  title = {The Effect of Probability Distributions on the Performance of Quantum Particle Swarm Optimization for Solving Dynamic Optimization Problems},
+  booktitle = {2015 IEEE Symposium Series on Computational Intelligence},
+  publisher = {IEEE},
+  year = {2015},
+  pages = {242--250},
+  url = {http://ieeexplore.ieee.org/document/7376617/},
+  doi = {10.1109/SSCI.2015.44}
+}
+</pre></td>
+</tr>
+<tr id="Medland2014" class="entry">
+	<td>M. R. Medland, K. R. Harrison and B. Ombuki-Berman (2014), <i>"Incorporating expert knowledge in object-oriented genetic programming"</i>, In Proceedings of the Companion Publication of the 2014 Annual Conference on Genetic and Evolutionary Computation. New York, NY, USA, pp. 145-146. ACM.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Medland2014','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Medland2014','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1145/2598394.2598494" target="_blank">DOI</a>] [<a href="https://dl.acm.org/doi/10.1145/2598394.2598494" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Medland2014" class="abstract noshow">
+	<td><b>Abstract</b>: Genetic programming (GP) has proven to be successful at generating programs which solve a wide variety of problems. Object-oriented GP (OOGP) extends traditional GP by allowing the simultaneous evolution of multiple program trees, and thus multiple functions. OOGP has been shown to be capable of evolving more complex structures than traditional GP. However, OOGP does not facilitate the incorporation of expert knowledge within the resulting evolved type. This paper proposes an alternative OOGP methodology which does incorporate expert knowledge by the use of a user-supplied partially-implemented type definition, i.e. an abstract class.</td>
+</tr>
+<tr id="bib_Medland2014" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Medland2014,
+  author = {Medland, Michael Richard and Harrison, Kyle Robert and Ombuki-Berman, Beatrice},
+  title = {Incorporating expert knowledge in object-oriented genetic programming},
+  booktitle = {Proceedings of the Companion Publication of the 2014 Annual Conference on Genetic and Evolutionary Computation},
+  publisher = {ACM},
+  year = {2014},
+  pages = {145--146},
+  url = {https://dl.acm.org/doi/10.1145/2598394.2598494},
+  doi = {10.1145/2598394.2598494}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2014Dynamic" class="entry">
+	<td>K. R. Harrison, B. M. Ombuki-Berman and A. P. Engelbrecht (2014), <i>"Dynamic multi-objective optimization using charged vector evaluated particle swarm optimization"</i>, In 2014 IEEE Congress on Evolutionary Computation (CEC)., pp. 1929-1936. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2014Dynamic','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2014Dynamic','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2014.6900399" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=6900399 https://ieeexplore.ieee.org/document/6900399" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2014Dynamic" class="abstract noshow">
+	<td><b>Abstract</b>: The vector evaluated particle swarm optimization (VEPSO) algorithm is a multi-swarm variation of the traditional particle swarm optimization (PSO) used to solve static multi-objective optimization problems (MOOPs). Recently, the dynamic VEPSO (DVEPSO) algorithm was proposed as an extension to VEPSO enabling the algorithm to handle dynamic MOOPs (DMOOPs). While DVEPSO has been successful at handling DMOOPs, the change detection mechanism relied on observing changes in objective space. An alternative strategy is proposed by using charged PSO (CPSO) sub-swarms with decision space change detection to address the outdated memory issue observed in vanilla PSO. This dynamic PSO variant allows for (implicit) decision space tracking not seen in DVEPSO while implicitly handling the diversity issue seen in dynamic environments. The proposed charged VEPSO is compared to DVEPSO on a wide variety of dynamic environment types. Results indicated that, in general, the proposed charged VEPSO outperformed the existing DVEPSO. Further, charged VEPSO exhibited better front-tracking abilities, while DVEPSO was superior with regards to locating the Pareto front.</td>
+</tr>
+<tr id="bib_Harrison2014Dynamic" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2014Dynamic,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice M. and Engelbrecht, Andries P.},
+  title = {Dynamic multi-objective optimization using charged vector evaluated particle swarm optimization},
+  booktitle = {2014 IEEE Congress on Evolutionary Computation (CEC)},
+  publisher = {IEEE},
+  year = {2014},
+  pages = {1929--1936},
+  url = {http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=6900399 https://ieeexplore.ieee.org/document/6900399},
+  doi = {10.1109/CEC.2014.6900399}
+}
+</pre></td>
+</tr>
+<tr id="Medland2014Demonstrating" class="entry">
+	<td>M. R. Medland, K. R. Harrison and B. M. Ombuki-Berman (2014), <i>"Demonstrating the power of object-oriented genetic programming via the inference of graph models for complex networks"</i>, In 2014 Sixth World Congress on Nature and Biologically Inspired Computing (NaBIC 2014)., pp. 305-311. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Medland2014Demonstrating','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Medland2014Demonstrating','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/NaBIC.2014.6921896" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/6921896/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Medland2014Demonstrating" class="abstract noshow">
+	<td><b>Abstract</b>: Traditionally, GP used a single tree-based representation which does not lend itself well to state-based programs or multiple behaviours. To alleviate this drawback, object-oriented GP (OOGP) introduced a means of evolving programs with multiple behaviours which could be easily extended to state-based programs. However, the production of programs which allowed embedded knowledge and produced readable code was still not easily addressed using the OOGP methodology. Exemplified through the evolution of graph models for complex networks, this paper demonstrates the benefits of a new approach to OOGP inspired by abstract classes and linear GP. Furthermore, the new approach to OOGP, named LinkableGP, facilitates the embedding of expert knowledge while also maintaining the benefits of OOGP.</td>
+</tr>
+<tr id="bib_Medland2014Demonstrating" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Medland2014Demonstrating,
+  author = {Medland, Michael Richard and Harrison, Kyle Robert and Ombuki-Berman, Beatrice M.},
+  title = {Demonstrating the power of object-oriented genetic programming via the inference of graph models for complex networks},
+  booktitle = {2014 Sixth World Congress on Nature and Biologically Inspired Computing (NaBIC 2014)},
+  publisher = {IEEE},
+  year = {2014},
+  pages = {305--311},
+  url = {http://ieeexplore.ieee.org/document/6921896/},
+  doi = {10.1109/NaBIC.2014.6921896}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2013Knowledge" class="entry">
+	<td>K. R. Harrison, B. Ombuki-Berman and A. P. Engelbrecht (2013), <i>"Knowledge Transfer Strategies for Vector Evaluated Particle Swarm Optimization"</i>, In Lecture Notes in Computer Science. Vol. 7811 LNCS, pp. 171-184. Springer.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2013Knowledge','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2013Knowledge','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/978-3-642-37140-0_16" target="_blank">DOI</a>] [<a href="http://link.springer.com/10.1007/978-3-642-37140-0{\_}16" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2013Knowledge" class="abstract noshow">
+	<td><b>Abstract</b>: Vector evaluated particle swarm optimization (VEPSO) is a multi-swarm variant of the traditional particle swarm optimization (PSO) algorithm applied to multi-objective problems (MOPs). Each sub-objective is allocated a single sub-swarm and knowledge transfer strategies (KTSs) are used to pass information between swarms. The original VEPSO used a ring KTS, and while VEPSO has shown to be successful in solving MOPs, other algorithms have been shown to produce better results. One reason for VEPSO to perform worse than other algorithms may be due to the inefficiency of the KTS used in the original VEPSO. This paper investigates new KTSs for VEPSO in order to improve its performance. The results indicated that a hybrid strategy using parent-centric crossover (PCX) on global best solutions generally lead to a higher hypervolume while using PCX on archive solutions generally lead to a better distributed set of solutions. textcopyright 2013 Springer-Verlag.</td>
+</tr>
+<tr id="bib_Harrison2013Knowledge" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@incollection{Harrison2013Knowledge,
+  author = {Harrison, Kyle Robert and Ombuki-Berman, Beatrice and Engelbrecht, Andries P.},
+  title = {Knowledge Transfer Strategies for Vector Evaluated Particle Swarm Optimization},
+  booktitle = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year = {2013},
+  volume = {7811 LNCS},
+  pages = {171--184},
+  url = {http://link.springer.com/10.1007/978-3-642-37140-0_16},
+  doi = {10.1007/978-3-642-37140-0_16}
+}
+</pre></td>
+</tr>
+<tr id="Harrison2013Scalability" class="entry">
+	<td>K. R. Harrison, A. P. Engelbrecht and B. M. Ombuki-Berman (2013), <i>"A scalability study of multi-objective particle swarm optimizers"</i>, In 2013 IEEE Congress on Evolutionary Computation., pp. 189-197. IEEE.
+	<p class="infolinks">[<a href="javascript:toggleInfo('Harrison2013Scalability','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Harrison2013Scalability','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1109/CEC.2013.6557570" target="_blank">DOI</a>] [<a href="http://ieeexplore.ieee.org/document/6557570/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="abs_Harrison2013Scalability" class="abstract noshow">
+	<td><b>Abstract</b>: Particle swarm optimization (PSO) is a well-known optimization technique originally proposed for solving single-objective, continuous optimization problems. However, PSO has been extended in various ways to handle multi-objective optimization problems (MOPs). The scalability of multi-objective PSO algorithms as the number of sub-objectives increases has not been well examined; most observations are for two to four objectives. It has been observed that the performance of multi-objective optimizers for a low number of sub-objectives can not be generalized to problems with higher numbers of sub-objectives. With this in mind, this paper presents a scalability study of three well-known multi-objective PSOs, namely vector evaluated PSO (VEPSO), optimized multi-objective PSO (oMOPSO), and speed-constrained multi-objective PSO (SMPSO) with up to eight sub-objectives. The study indicates that as the number of sub-objectives increases, SMPSO scaled the best, oMOPSO scaled the worst, while VEPSO's performance was dependent on the knowledge transfer strategy (KTS) employed, with parent centric recombination (PCX) based approaches scaling consistently better.</td>
+</tr>
+<tr id="bib_Harrison2013Scalability" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inproceedings{Harrison2013Scalability,
+  author = {Harrison, Kyle Robert and Engelbrecht, Andries P. and Ombuki-Berman, Beatrice M.},
+  title = {A scalability study of multi-objective particle swarm optimizers},
+  booktitle = {2013 IEEE Congress on Evolutionary Computation},
+  publisher = {IEEE},
+  year = {2013},
+  pages = {189--197},
+  url = {http://ieeexplore.ieee.org/document/6557570/},
+  doi = {10.1109/CEC.2013.6557570}
+}
+</pre></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

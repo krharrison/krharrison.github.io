@@ -84,7 +84,7 @@ author:
   avatar           : "profile.png"
   bio              : "Research Associate at UNSW Canberra"
   location         : "Canberra, Australia"
-  employer         : "University of New South Wales"
+  employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.ca/citations?hl=en&user=I6ljyNAAAAAJ"
   email            :
@@ -181,7 +181,13 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  journals:
+    output: true
+    permalink: /:collection/:path/
+  conferences:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -227,10 +233,28 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _conferences
   - scope:
       path: ""
-      type: portfolio
+      type: conferences
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+    # _journals
+  - scope:
+      path: ""
+      type: journals
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+   #_projects
+  - scope:
+      path: ""
+      type: projects
     values:
       layout: single
       author_profile: true

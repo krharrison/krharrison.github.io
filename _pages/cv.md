@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Full CV available here: [CV (PDF)]({{ site.baseurl }}{% link /files/KRHarrison_CV.pdf %}). Last updated: 02 Feb 2021
+Full CV available here: [CV (PDF)]({{ site.baseurl }}{% link /files/KRHarrison_CV.pdf %}). Last updated: 08 Feb 2021
 
 Education
 ======

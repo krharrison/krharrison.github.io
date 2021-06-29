@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Full CV available here: [CV (PDF)]({{ site.baseurl }}{% link /files/KRHarrison_CV.pdf %}). Last updated: 08 Feb 2021
+Full CV available here: [CV (PDF)]({{ site.baseurl }}{% link /files/KRHarrison_CV.pdf %}). Last updated: 29 Jun 2021
 
 Education
 ======
@@ -78,7 +78,7 @@ Other Scholarly Activities
   * Mitchell D. Clark (MSc), Brock University, 2020
 
 ## Special Session (Conference) Organization ##
-  * **Adaptive Evolutionary Computation and Swarm Intelligence Algorithms**, IEEE Congress on Evolutionary Computation (Accepted), 2021
+  * **Adaptive Evolutionary Computation and Swarm Intelligence Algorithms**, IEEE Congress on Evolutionary Computation, 2021
   * **Adaptive Swarm Intelligence Algorithms**, IEEE Congress on Evolutionary Computation, 2019
   * **Adaptive Swarm Intelligence Algorithms**, IEEE Swarm Intelligence Symposium, 2017
 
@@ -88,6 +88,7 @@ Other Scholarly Activities
   * The Genetic and Evolutionary Computation Conference (GECCO), ACO-SI track, 2020 - 2021
 
 ## Reviewer (Date of First Review) ##
+  * IEEE International Conference on Systems, Man, and Cybernetics (SMC), 2021
   * Memetic Computing (Q1 journal), 2020
   * International Conference on Machine Learning, Optimization and Data Science (LOD), 2019
   * IEEE Access (Q1 journal), 2019
@@ -98,7 +99,7 @@ Other Scholarly Activities
   * Journal of Computational and Applied Mathematics (Q2 journal), 2018
   * Operational Research (Q1 journal), 2017
   * IEEE Symposium Series on Computational Intelligence (SSCI), 2017
-  * IEEE Transactions on Emerging Topics in Computational Intelligence (journal), 2017
+  * IEEE Transactions on Emerging Topics in Computational Intelligence (Q1 journal), 2017
   * Engineering Applications of Artificial Intelligence (Q1 journal), 2017
   * IEEE Transactions on Evolutionary Computation (Q1 journal), 2017
   * Swarm Intelligence (Q2 journal), 2016
